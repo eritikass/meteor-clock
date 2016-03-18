@@ -1,0 +1,57 @@
+<head>
+    <title>Clock</title>
+
+    <meta name="fragment" content="!">
+    <link rel="Shortcut Icon" href="http://time.kassikas.com//favicon.ico">
+
+</head>
+
+<body>
+
+<p style="text-align:center;font-weight:bold;font-size:38px;">
+    <select id="timezone" style="font-size:38px;">
+        {{#each gettimezones}}
+            <option {{testtimezone this}} value="{{this}}">{{this}}</option>
+        {{/each}}
+    </select>
+</p>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="350" height="350"
+     viewBox="-110 -110 220 220"
+     class="clock">
+
+    <!-- bounding circle -->
+    <circle cx="0" cy="0" r="100"/>
+
+    <!-- hour, minute and second  -->
+    {{#with handData}}
+        <line {{radial hourDegrees 0 .55}} class="hour" />
+        <line {{radial minuteDegrees 0 .85}} class="minute" />
+        <line {{radial secondDegrees 0 .95}} class="second" />
+    {{/with}}
+
+    <!-- tick marks -->
+    {{#each hours}}
+        <line {{radial degrees 0.9 1}} class="tick"/>
+    {{/each}}
+</svg>
+
+<div class="footer">
+    <h2>{{getStr}}</h2>
+
+    <br>
+
+    <button class="btn btn-default setlang" data-tz="Europe/Tallinn">
+        <img class="flag" src="/est.png" width="20" /> Est
+    </button>
+
+    <button class="btn btn-default setlang" data-tz="Eve-Online">
+        <img class="flag" src="/eve.png" width="20" /> Eve
+    </button>
+
+</div>
+
+</body>
+
+
