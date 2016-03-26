@@ -52,11 +52,23 @@ Template.body.helpers({
 
     buttons: function () {
         return [
-            {name: 'Estonia', 'tz': 'Europe/Tallinn'},
-            {name: 'Eve', 'tz': 'Eve-Online'},
-            {name: 'China', 'tz': 'CST'},
+            {name: 'Estonia', tz: 'Europe/Tallinn'},
+            {name: 'Eve', tz: 'Eve-Online'},
+            {name: 'China', tz: 'CST'},
+            {tz: 'US/Pacific', flag: 'us'},
+            {tz: 'US/Central', flag: 'us'},
+            {tz: 'US/Eastern', flag: 'us'},
         ]
     },
+
+    getflag: function() {
+        return this.flag ? this.flag : this.name || false;
+    },
+
+    getname: function() {
+        return this.name ? this.name : this.tz;
+    },
+
 
     gettimezones: function () {
         return moment.tz.names()
