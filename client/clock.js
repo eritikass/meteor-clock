@@ -3,6 +3,8 @@ var flags = [
     {name: 'Eve', tz: 'Eve-Online', 'png': true},
     {name: 'Sweden', tz: 'Europe/Stockholm'},
 
+    {break: true},
+
     {name: 'Norway', tz: 'Europe/Oslo'},
     {name: 'Denmark', tz: 'Europe/Copenhagen'},
     {name: 'Finland', tz: 'Europe/Helsinki'},
@@ -16,6 +18,8 @@ var flags = [
 
     {name: 'Scotland', tz: 'Europe/Edinburgh'},
     {name: 'UK', tz: 'Europe/London'},
+
+    {break: true},
 
     {name: 'Australia', tz: 'Australia/Sydney'},
 

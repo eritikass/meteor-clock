@@ -44,9 +44,13 @@
 
     <div class="flags">
         {{#each buttons}}
-            <button class="btn btn-default setlang" data-tz="{{tz}}">
-                {{#if getflag}}<img class="flag" src="{{getflag}}" width="20"/> {{/if}} {{getname}}
-            </button>
+            {{#if break}}
+                <br>
+            {{else}}
+                <button class="btn btn-default setlang" data-tz="{{tz}}">
+                    {{#if getflag}}<img class="flag" src="{{getflag}}" width="20"/> {{/if}} {{getname}}
+                </button>
+            {{/if}}
         {{/each}}
     </div>
 
