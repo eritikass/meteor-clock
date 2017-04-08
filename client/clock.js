@@ -12,11 +12,12 @@ var flags = [].concat([
     {name: 'Germany', tz: 'Europe/Berlin'},
     {name: 'Poland', tz: 'Europe/Warsaw'},
     {name: 'Luxembourg', 'tz': 'Europe/Luxembourg'/*, 'flagurl': 'https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg'*/},
-
+    {name: 'South Africa', tz: 'Africa/Johannesburg', flag: 'South_Africa'},
     {name: 'Ireland', tz: 'Europe/Dublin'},
     {name: 'Spain', tz: 'Europe/Madrid'},
     {name: 'Turkey', tz: 'Europe/Istanbul'},
     {name: 'Switzerland', tz: 'Europe/Zurich'},
+    {name: 'Iceland', tz: 'Atlantic/Reykjavik'},
     {name: 'Scotland', tz: 'Europe/Edinburgh'},
     {name: 'UK', tz: 'Europe/London'}
 ]),
