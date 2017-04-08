@@ -5,15 +5,13 @@ env:
 
 language: node_js
 node_js:
-  - "7"
+  - "6"
 
 services:
   - docker
 
 before_install:
-  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-meteor-packages/master/configure.sh | /bin/sh"
-before_script:
-  - "export PATH=$HOME/.meteor:$PATH"
+  - curl https://install.meteor.com/ | sh
 
 script:
   - meteor build --directory meteor_build
