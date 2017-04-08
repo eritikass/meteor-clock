@@ -5,6 +5,6 @@ services:
     image: eritikass/meteor-clock
     restart: always
     environment:
-      - ROOT_URL=http://time.n8rth.online/
+      - ROOT_URL=https://time.n8rth.online/
     ports:
       - "8012:80"
