@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+#
+# to test dockerhub automated build
+#
+# docker build -t eritikass/meteor-clock:test_automated -f Dockerfile-dockerhub .
+#
+
 ./add_buildinfo.sh
 
 GIT_BRANCH=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
