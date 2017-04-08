@@ -14,7 +14,7 @@ before_install:
   - curl https://install.meteor.com/ | sh
 
 script:
-  - echo "{\"commit\": \"$TRAVIS_COMMIT\"}" > public/git.json
+  - ./add_buildinfo.sh
   - meteor build --directory meteor_build
   - docker build --tag $DOCKERHUB_IMAGE .
 
