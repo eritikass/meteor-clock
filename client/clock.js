@@ -20,15 +20,15 @@ var flags = [].concat([
     {name: 'Scotland', tz: 'Europe/Edinburgh'},
     {name: 'UK', tz: 'Europe/London'}
 ]),
-    [
-    {break: true},
+    [{break: true}],
 
+    _.shuffle([
     {name: 'Australia', tz: 'Australia/Sydney'},
 
     {tz: 'US/Pacific', flag: 'us'},
     {tz: 'US/Central', flag: 'us'},
     {tz: 'US/Eastern', flag: 'us'}
-]);
+]));
 
 Session.set('time_dif', 0);
 Session.set('timezone', 'Europe/Tallinn')
