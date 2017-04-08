@@ -53,7 +53,7 @@ Template.body.helpers({
     buttons: function () {
         return [
             {name: 'Estonia', tz: 'Europe/Tallinn'},
-            {name: 'Eve', tz: 'Eve-Online'},
+            {name: 'Eve', tz: 'Eve-Online', 'png': true},
             //{name: 'China', tz: 'CST'},
             {name: 'Sweden', tz: 'Europe/Stockholm'},
             {tz: 'US/Pacific', flag: 'us'},
@@ -63,7 +63,7 @@ Template.body.helpers({
     },
 
     getflag: function() {
-        return this.flag ? this.flag : this.name || false;
+        return (this.flag || this.name) ? '/flag/' + (this.flag || this.name) + '.' + (this.png ? 'png' : 'svg') : false;
     },
 
     getname: function() {
