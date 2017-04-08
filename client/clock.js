@@ -1,10 +1,11 @@
-var flags = [
+var flags = [].concat([
     {name: 'Estonia', tz: 'Europe/Tallinn'},
     {name: 'Eve', tz: 'Eve-Online', 'png': true},
     {name: 'Sweden', tz: 'Europe/Stockholm'},
 
-    {break: true},
-
+    {break: true}
+],
+    _.shuffle([
     {name: 'Norway', tz: 'Europe/Oslo'},
     {name: 'Denmark', tz: 'Europe/Copenhagen'},
     {name: 'Finland', tz: 'Europe/Helsinki'},
@@ -17,16 +18,17 @@ var flags = [
     {name: 'Turkey', tz: 'Europe/Istanbul'},
 
     {name: 'Scotland', tz: 'Europe/Edinburgh'},
-    {name: 'UK', tz: 'Europe/London'},
-
+    {name: 'UK', tz: 'Europe/London'}
+]),
+    [
     {break: true},
 
     {name: 'Australia', tz: 'Australia/Sydney'},
 
     {tz: 'US/Pacific', flag: 'us'},
     {tz: 'US/Central', flag: 'us'},
-    {tz: 'US/Eastern', flag: 'us'},
-];
+    {tz: 'US/Eastern', flag: 'us'}
+]);
 
 Session.set('time_dif', 0);
 Session.set('timezone', 'Europe/Tallinn')
