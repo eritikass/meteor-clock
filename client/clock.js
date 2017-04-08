@@ -3,7 +3,8 @@ Session.set('timezone', 'Europe/Tallinn')
 
 moment.tz.link([
     'Eve-Online|GMT',
-    'CST|Asia/Shanghai'
+    'CST|Asia/Shanghai',
+    'Europe/Edinburgh|Europe/London'
 ])
 
 function setTime() {
@@ -55,6 +56,23 @@ Template.body.helpers({
             {name: 'Estonia', tz: 'Europe/Tallinn'},
             {name: 'Eve', tz: 'Eve-Online', 'png': true},
             {name: 'Sweden', tz: 'Europe/Stockholm'},
+
+            {name: 'Norway', tz: 'Europe/Oslo'},
+            {name: 'Denmark', tz: 'Europe/Copenhagen'},
+            {name: 'Finland', tz: 'Europe/Helsinki'},
+            {name: 'Germany', tz: 'Europe/Berlin'},
+            {name: 'Poland', tz: 'Europe/Warsaw'},
+            {name: 'Luxembourg', 'tz': 'Europe/Luxembourg'/*, 'flagurl': 'https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg'*/},
+
+            {name: 'Ireland', tz: 'Europe/Dublin'},
+            {name: 'Spain', tz: 'Europe/Madrid'},
+            {name: 'Turkey', tz: 'Europe/Istanbul'},
+
+            {name: 'Scotland', tz: 'Europe/Edinburgh'},
+            {name: 'UK', tz: 'Europe/London'},
+
+            {name: 'Australia', tz: 'Australia/Sydney'},
+
             {tz: 'US/Pacific', flag: 'us'},
             {tz: 'US/Central', flag: 'us'},
             {tz: 'US/Eastern', flag: 'us'},
@@ -62,6 +80,9 @@ Template.body.helpers({
     },
 
     getflag: function() {
+        if (this.flagurl) {
+            return this.flagurl;
+        }
         return (this.flag || this.name) ? '/flag/' + (this.flag || this.name) + '.' + (this.png ? 'png' : 'svg') : false;
     },
 
