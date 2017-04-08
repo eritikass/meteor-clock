@@ -54,7 +54,8 @@ Template.body.helpers({
         return [
             {name: 'Estonia', tz: 'Europe/Tallinn'},
             {name: 'Eve', tz: 'Eve-Online'},
-            {name: 'China', tz: 'CST'},
+            //{name: 'China', tz: 'CST'},
+            {name: 'Sweden', tz: 'Europe/Stockholm'},
             {tz: 'US/Pacific', flag: 'us'},
             {tz: 'US/Central', flag: 'us'},
             {tz: 'US/Eastern', flag: 'us'},
