@@ -1,8 +1,7 @@
 sudo: required
 
 env:
-  - DOCKERHUB_IMAGE: $DOCKERHUB_USERNAME/meteor-clock:$TRAVIS_BRANCH
-  - DOCKERHUB_IMAGE_LATEST: $DOCKERHUB_USERNAME/meteor-clock:latest
+  - DOCKERHUB_IMAGE: $DOCKERHUB_USERNAME/meteor-clock:$TRAVIS_BRANCH  DOCKERHUB_IMAGE_LATEST: $DOCKERHUB_USERNAME/meteor-clock:latest
 
 language: node_js
 node_js:
