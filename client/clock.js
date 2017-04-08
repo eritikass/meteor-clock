@@ -19,6 +19,7 @@ var flags = [].concat([
     {name: 'Switzerland', tz: 'Europe/Zurich'},
     {name: 'Iceland', tz: 'Atlantic/Reykjavik'},
     {name: 'Scotland', tz: 'Europe/Edinburgh'},
+    {name: 'France', tz: 'Europe/Paris'},
     {name: 'UK', tz: 'Europe/London'}
 ]),
     [{break: true}],
