@@ -2,7 +2,7 @@ version: "2"
 services:
 
   meteor:
-    image: eritikass/meteor-clock
+    image: eritikass/meteor-clock:master
     restart: always
     environment:
       - ROOT_URL=https://time.n8rth.online/
