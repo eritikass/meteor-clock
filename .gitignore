@@ -3,3 +3,4 @@ createapp.sh
 deploy.sh
 deploy_package.tar.gz
 node_modules
+meteor_build

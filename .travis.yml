@@ -1,0 +1,24 @@
+sudo: required
+
+env:
+  - DOCKERHUB_IMAGE: $DOCKERHUB_USERNAME/meteor-clock:latest
+
+language: node_js
+node_js:
+  - "7"
+
+services:
+  - docker
+
+before_install:
+  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-meteor-packages/master/configure.sh | /bin/sh"
+before_script:
+  - "export PATH=$HOME/.meteor:$PATH"
+
+script:
+  - meteor build --directory meteor_build
+  - docker build --tag $DOCKERHUB_IMAGE .
+
+after_success:
+  - docker login --username="$DOCKERHUB_USERNAME" --password="$DOCKERHUB_PASSWORD"
+  - docker push $DOCKERHUB_IMAGE
