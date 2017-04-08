@@ -1,1 +1,1 @@
-http://time.kassikas.com/
+http://time.n8rth.online/
