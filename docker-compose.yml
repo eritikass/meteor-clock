@@ -1,0 +1,11 @@
+version: "2"
+services:
+
+  meteor:
+    image: ulexus/meteor:v1.4
+    environment:
+      - ROOT_URL=http://time.n8rth.online/
+    volumes:
+      - ./:/home/meteor/src
+    ports:
+      - "8012:80"
